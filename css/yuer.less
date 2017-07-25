@@ -1,0 +1,138 @@
+@import url(reset.css);
+.full(@w, @h, @bg) {
+    width: @w;
+    height: @h;
+    background-color: @bg;
+};
+@mycolor: #f9384b;
+.fl(@fl:left) {
+    float: @fl;
+}
+.fr(@fr:right) {
+    float: @fr;
+}
+//封装居中
+.cen() {
+    margin: 0 auto;
+}
+.zong(@ver:column) {
+    display: flex;
+    flex-direction: @ver;
+}
+//纵向
+.shui(@hor:row) {
+    display: flex;
+    flex-direction: @hor;
+}
+//水平
+html,
+body,
+.content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    .zong;
+}
+.header1{
+    .full(100%,4.6rem,null);
+    background-image:-webkit-linear-gradient(top,#fa6876,#f9394b);
+    .top{
+        .shui;
+        margin: 0 .4rem;
+        margin:.2rem .4rem;
+        span{
+            display: block;
+            color: #fff;
+        }
+        span:first-child{
+            margin-right: .25rem;
+            img{
+                .full(.36rem,auto,null);
+            }
+        }
+        span:nth-child(2){
+            flex: 1;
+            padding-left: .17rem;
+            border-left: 1px solid #ddd;
+        }
+    }//top
+    .cen{
+        .full(auto,auto,null);
+        padding-left: 1.2rem;
+        color: #fff;
+        border-bottom: 1px solid #fb7c88;
+        .c_p1{
+            margin-top: .4rem;
+        }
+        .c_p2{
+            margin-top: .4rem;
+            margin-bottom: .7rem;
+            b{
+                font-size: .4rem;
+            }
+            a{
+                color: #fff;
+                text-decoration: underline;
+                margin-left: .35rem;
+            }
+        }
+    }//cen
+    .bottom{
+        ul{
+            .shui;
+            li{
+                flex: 1;
+                text-align: center;
+                color: #fff;
+                span{
+                    display: block;
+                }
+                span:first-child{
+                    margin-top: .24rem;
+                }
+                span:last-child{
+                    margin-top: .15rem;
+                    font-size: .4rem;
+                }
+            }
+        }
+    }//bottom
+    
+}//header1
+.section1{
+    overflow:auto;
+    .list{
+        .item{
+            .shui;
+            height: 1.27rem;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            span{
+                display: block;
+            }
+            span:first-child{
+                img{
+                    .full(1.15rem,1.19rem,null);
+                    margin-left: .4rem;
+                }
+            }
+            span:nth-child(2){
+                margin-left: .2rem;
+                flex: 1;
+            }
+            span:last-child{
+                margin-right: .4rem;
+                .full(1rem,.4rem,null);
+                box-sizing: border-box;
+                border: 1px solid #f9384b;
+                color: #f9384b;
+                text-align: center;
+            }
+        }
+    }
+    
+}//section1
